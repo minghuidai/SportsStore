@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SportsStore.Domain.Abstract;
 
 namespace SportsStore.UnitTests
 {
@@ -10,5 +11,12 @@ namespace SportsStore.UnitTests
         public void TestMethod1()
         {
         }
+
+        [TestMethod]
+        public void Can_Paginate()
+        {
+            Mock(IProductsRepository) mock;// = new 
+        }
+
     }
 }
