@@ -32,10 +32,14 @@ namespace SportsStore.UnitTests
             var controller = new ProductController(mock.Object);
             controller.PageSize = 4;
 
-            IEnumerable<Product> result = (IEnumerable<Product>)controller.List(2).Model;
+            ProductListViewModel result = (ProductListViewModel)controller.List(2).Model;
 
-            Product[] prodArr = result.ToArray();
+            Product[] prodArr = result.Products.ToArray();
+
+            // Assert
             Assert.AreEqual(prodArr.Length, 1);
+            Assert.AreEqual(result.PagingInfo.CurrentPage, 2);
+
 
 
         }
