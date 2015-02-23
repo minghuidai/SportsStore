@@ -40,8 +40,6 @@ namespace SportsStore.UnitTests
             Assert.AreEqual(prodArr.Length, 1);
             Assert.AreEqual(result.PagingInfo.CurrentPage, 2);
 
-
-
         }
 
 
