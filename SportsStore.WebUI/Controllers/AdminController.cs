@@ -20,9 +20,17 @@ namespace SportsStore.WebUI.Controllers
 
 
         // GET: Admin
+        [HttpGet]
         public ViewResult Index()
         {
             return View(repository.Products);
+        }
+
+
+        [HttpGet]
+        public ViewResult Add()
+        {
+            return View();
         }
     }
 }

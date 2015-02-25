@@ -1,0 +1,74 @@
+﻿@model SportsStore.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Admin: Add Product";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-header">
+        <h3>Add Product</h3>
+    </div>
+
+    <div class="panel-body">
+        <h4>Product</h4>
+        <hr />
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            
+            @Html.ValidationSummary(true)
+            
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Description)
+                    @Html.ValidationMessageFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Price)
+                    @Html.ValidationMessageFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.LabelFor(model => model.Category, new { @class = "control-label col-md-2" })
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Category)
+                    @Html.ValidationMessageFor(model => model.Category)
+                </dd>
+
+                <dt>
+
+                </dt>
+                <dd>
+                    <input type="submit" value="Add" class="btn btn-default" />
+                </dd>
+            </dl>
+      
+        }
+
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</div>
+
+
