@@ -7,22 +7,54 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <style>
+        #setting-panel, #categories {
+            position: fixed;
+            /*position: absolute;*/
+            /*max-width: 600px;*/
+            /*float: right;*/
+            /*margin-right: -100px;*/
+            right: 0px;
+            top: 0px;
+            height: 100%;
+        }
+
+        #categories {
+            background-color: #eeeeee;
+            /*width: 600px;*/
+            /*margin-right: -100px;*/
+        }
+
+        .box-800 {
+            width: 800px;
+            min-width: 800px;
+        }
+
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">SPORTS STORE</a>
     </div>
 
-    <div class="row panel">
-        <div id="categories" class="col-xs-3">
-            Put something useful here
+    
+    <div class="container row panel" >
+
+        <div class="col-xs-3">
+            dfasdfasf
         </div>
+
 
         <div class="col-xs-8">
             @RenderBody()
         </div>
 
     </div>
+
+    <div id="categories" class="col-xs-3">
+        <div>Put something useful here</div>
+    </div>
+
 
 </body>
 </html>
