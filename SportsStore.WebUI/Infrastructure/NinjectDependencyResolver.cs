@@ -3,6 +3,8 @@ using Ninject;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Concrete;
 using SportsStore.Domain.Entities;
+using SportsStore.WebUI.Infrastructure.Abstract;
+using SportsStore.WebUI.Infrastructure.Concrect;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -64,6 +66,10 @@ namespace SportsStore.WebUI.Infrastructure
 
             // put bindings here
             kernel.Bind<IProductsRepository>().To<EFProductsRepository>();
+
+            // Bind AuthProvider
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
+
         }
 
     }
