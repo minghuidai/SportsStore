@@ -154,3 +154,14 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+
+packages
+/SportsStore.WebUI/Content/bootstrap-theme.css
+/SportsStore.WebUI/Content/bootstrap-theme.css.map
+/SportsStore.WebUI/Content/bootstrap-theme.min.css
+/SportsStore.WebUI/Content/bootstrap.css.map
+/SportsStore.WebUI/Scripts/jquery-1.9.1.intellisense.js
+/SportsStore.WebUI/Scripts/jquery-1.9.1.js
+/SportsStore.WebUI/Scripts/jquery-1.9.1.min.js
+/SportsStore.WebUI/Scripts/jquery-1.9.1.min.map
